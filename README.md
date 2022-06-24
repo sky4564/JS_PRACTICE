@@ -10,7 +10,7 @@ JS_PRACTICE for codeingtest
 
 3. 소스 폴더에서 node .\문제이름.js 로 실행시켜서 결과 확인
 
-EX)
+-> EX)
 PS C:\XXXX\XXXX\Desktop\JS_PRACTICE\common\section1> node .\8_일곱난쟁이.js
 [
   20, 7, 23, 19,
