@@ -1,4 +1,13 @@
             function solution(arr){         
+                
+                let min = arr[0]
+                let answer = 1
+                for(let i = 1; i < arr.length; i++){
+                    if(arr[i] > min){
+                        answer += 1
+                        min = arr[i]
+                    }
+                }
                 return answer;
             }
 
