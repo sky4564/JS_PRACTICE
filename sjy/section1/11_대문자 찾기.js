@@ -1,5 +1,8 @@
-            function solution(s){         
-            }
+function solution(item) {
+  const answer = item.match(/[A-Z]/g).length;
 
-            let str="KoreaTimeGood";
-            console.log(solution(str));
+  return answer;
+}
+
+let item = "KoreaTimeGood";
+console.log(solution(item));
