@@ -13,7 +13,7 @@ function solution(arr) {
     for (let j = 1; j < arr.length; j++) {
       if (sum - (arr[i] + arr[j]) === 100) {
         // i번째 원소를 먼저 제거할 경우 -> j번째 원소가 i번쨰 원소의 인덱스로 당겨진다.
-        // -> j번째 원소를 제거한 후 i번째 원소를 제거해야 한다!
+        // -> j번째 원소를 제거한 후 i번째 원소를 제거해야 한다
         arr.splice(j, 1);
         arr.splice(i, 1);
       }
