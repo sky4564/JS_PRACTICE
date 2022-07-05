@@ -1,4 +1,10 @@
-            function solution(s){  
-            }
+function solution(input) {
+  const answer = input
+    .split("")
+    .map((e) => (e.match(/[A-Z]/g) ? e.toLowerCase() : e.toUpperCase()))
+    .join("");
 
-            console.log(solution("StuDY"));
+  return answer;
+}
+
+console.log(solution("StuDY"));
