@@ -1,0 +1,68 @@
+<div></div>
+<button id ='btn'>버튼1</button>
+<button id ='btn2'>버튼2</button>
+<script>
+    
+    console.log('======================================')
+    // consturctor 에서 this = 새로생성되는 objcet 의 인스턴스
+    function maker() {
+        this.name  ='bitcoin'
+        this.amount = 2910238
+        this.price = 20000000
+    }
+    
+    var litecoin = new maker()
+    
+    console.log(litecoin)
+
+    console.log('======================================')
+
+
+    document.getElementById('btn').addEventListener('click', 
+    function(e){
+        // this ==  e.currentTarget  == 지금 이벤트 동작하는 곳
+        console.log(this)
+        console.log(e.currentTarget)        
+    }
+    )
+
+    console.log('======================================')
+
+
+    document.getElementById('btn2').addEventListener('click', 
+    function(e){
+        let arr = [1,2,3]
+        arr.forEach(function(a){
+            console.log(a)
+        })
+    }
+    )
+
+    console.log('======================================')
+
+    let obj2 = {
+        test1 : console.log(this),
+        name : ['jj', 'aa', 'bb'],
+        func : function() {
+            
+            // 반복문에 들어가 있는 this 는 window를 가르킴
+            // foreach 의 콜백으로 들어가니깐 결국 상위요소는 foreach이고 
+            //foreach 는 window에 붙어있는거라서 ㅇㅇㅇ 
+            obj2.name.forEach(function(){ 
+                console.log(this)
+            })
+            console.log(this)  // 여기가 쫌 헷갈리겠네 여기서 this는 obj 가르킴
+
+        }
+    }
+
+    obj2.func()
+
+
+    // 결론 : 엄청 귀찮으니 arrow function 나옴 
+
+
+
+
+
+</script>

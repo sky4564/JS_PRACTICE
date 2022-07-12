@@ -1,0 +1,61 @@
+<div></div>
+
+
+
+<script>
+
+// 1.풀이
+// 함수랑 변수는 hoisting이 되서 작동함
+// 함수는 안에있는 내용까지 hoisting 되서 정상작동
+// 변수는 할당은 hoisting 안되고 선언만 됨
+
+
+// test1()
+// function test1(){
+//     console.log(hi)
+//     console.log('func work')
+//     let hi ='hi!!'
+// }
+
+// ================================================//
+
+// 2. 풀이 호이스팅 됬지만  test2의 value 인 함수가 없기때문에 
+// 함수자체가 실행되지않음 ! 
+
+// test2()
+// var test2 = function(){
+//     console.log(hi)
+//     console.log('func work')
+//     var hi ='hi!!'
+// }
+
+// ================================================//
+
+// 걍 함수 실행 안해서 변화 x 기본적인거.. 
+
+// let a = 1
+// var test3 = function(){
+//     a = 2
+// }
+
+// console.log(a)
+
+// ================================================//
+
+
+//const와 마찬가지로 let 역시 
+//전역 범위 선언에 사용(최상위 스코프 선언)해도 
+//window 객체에 새로운 속성을 추가하지 않습니다.
+// let,const 자체가 그렇게 안씀 중간에 다른블럭이 끼여있는게아님
+// script 에 선언된 var 변수는 바로 window 박스에  들어감
+
+
+// let a = 1;
+// var b = 2;
+// console.log(window.a)
+// console.log(window.b)
+// window.b = 4;
+// console.log(a + b);
+
+
+</script>

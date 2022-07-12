@@ -1,0 +1,42 @@
+<div>
+    {템플릿}
+</div>
+
+<script>
+    // var a =`손흥민
+    //         ????????
+    //         엔터를 쳐도 되네`
+
+
+    // var 변수 = `손흥민`;
+    // var 변수2 = '손흥민2'
+    // var 문자 = `안녕하세요 저는 ${변수} 입니다.`
+    // var 템플릿 = `<div>
+    //                 ${변수}
+    //             </div>`
+
+    // console.log(템플릿)
+
+
+    // function shaker(words, values) {
+    //     console.log(words)
+    //     console.log(values)
+    // }
+    // shaker`안녕하세요 저는 ${변수} + ${변수2} 입니다.`
+
+    // =====================================================
+
+    var pants =0
+    var socks = 100
+
+
+    function mixer(words, ...value){
+        console.log(`바지${pants} 양말${socks}`)
+        console.log(`${words[1]} ${value[0]} ${words[0]} ${value[1]}`)
+        if(value[0] === 0){
+            console.log(`${words[0]} 다 팔렸네요 ~ `)
+        }
+    }
+    mixer`바지${pants} 양말${socks}`
+
+</script>

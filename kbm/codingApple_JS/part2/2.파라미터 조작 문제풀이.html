@@ -1,0 +1,82 @@
+<div></div>
+
+<script>
+    var a = [1,2,3]
+    var b = '김밥'
+    var c = [...b,...a]
+    console.log(c)
+    //['김','밥',1,2,3]
+
+    //=================================================//
+
+    var a = [1,2,3];
+    var b = ['you', 'are'];
+    var c = function(a,b){
+        // 너무 많이 남발하니깐 가독성이 떨어진다..
+        console.log( [[...a], ...[...b]][1] )
+        console.log( [[1,2,3], 'you', 'are'][1] )
+    }
+    c(a,b);
+    //you
+    //=================================================//
+    function 함수(a = 5, b = a * 2 ){
+        console.log(a + b);
+    return 10
+    }
+    함수(3);
+    ///9
+    //=================================================//
+    function 함수(a = 5, b = a * 2 ){
+        console.log(a + b);
+    }
+    함수(undefined, undefined);
+    // undefined 는 미정이라는거니깐 default parameter 있으면 그거씀
+    // 15   
+    //=================================================//
+    function 어레이(...rest){
+        return [rest[0], rest]
+    }
+
+    var newArray = 어레이(1,2,3,4,5);
+    console.log(newArray);
+    // 이건그냥 품
+    //=================================================//
+    
+    var numbers = [2,3,4,5,6,1,3,2,5,5,4,6,7];
+
+    console.log(Math.max(...numbers))
+    // spread operater 사용
+    
+    //=================================================//   
+    
+    console.log( [ 'b', 'c', 'a' ].sort() );
+
+    //[ 'a', 'b', 'c' ] 출력됨      
+
+    function 정렬(p){
+        console.log(p.split('').sort().join(''))
+        console.log(...[...p].sort())
+    }
+
+    정렬('bear'); 
+
+    function counting(p){
+        let result = {};
+        [...p].forEach(function(a){
+            if(result[a]>0){
+                result[a]++                
+            }else result[a] = 1 
+        })
+        console.log(result)
+    }
+    console.log(counting('aacbbb'))
+
+
+
+
+
+
+
+
+
+</script>

@@ -1,0 +1,70 @@
+<div></div>
+<button id ='btn'>버튼1</button>
+
+<script>
+    function 함수1() {
+
+    }
+
+    
+    //==================================
+    
+    let 함수2 = function() {
+
+    }
+
+    let arrow함수  = () => {
+
+    }
+
+
+
+
+
+    //함수는 항상 목적에 맞게
+    // 코드들을 기능으로 묶고 싶을떄
+    // 입출력 기계를 만들고 싶을떄
+    let arrow함수2  = (a) => { return a + 5}
+    // arrow 함수는 직관적으로 쓸수있다.
+    // 파라미터 1개면 소괄호 생략 가능 하다.
+    // 코드한줄이면 중괄호도 생략 가능하다.
+    let simpleArrow  = a => a + 5
+
+    // 용례 , 사용법 , 주의할곳 ! 
+
+    [1,2,3,4].forEach(a => console.log(a))
+
+    document.getElementById('btn').addEventListener('click', 
+    e => {
+        
+        
+        //this 바깥에있는  this값을 그대로 사용
+
+        // 일반 이벤트리스터 에서는 this == e.currentTartget
+        // arrowfunction 이벤트리스너에서는 this == 바깥의 this값
+
+        //해결법 this 안쓰고 그냥 e.currentTarget 쓰면됨
+    }    
+    )
+
+
+    
+    //arrow function 적용하면 this 바깥에있는  this값을 그대로 사용
+    let obj3 = {
+        함수 : function() {
+            return this
+        },
+
+        간단함수 : () => {
+            return this
+        },
+    }
+
+    console.log('이거 일반')
+    console.log(obj3.함수())
+    console.log('이거 arrow')
+    console.log(obj3.간단함수())
+
+    
+
+</script>

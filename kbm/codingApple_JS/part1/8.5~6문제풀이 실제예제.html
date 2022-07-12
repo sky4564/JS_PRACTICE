@@ -1,0 +1,39 @@
+<div>
+    <button id="p1">problem1</button>
+</div>
+
+<script>
+    
+    // 여기서도 var i , let i 차이 확인가능
+    // 혼자서 여기저기 넣어보면서 생각해볼것.
+    var i = 10
+    function p1(){
+        var i = '123'
+        
+        
+        // let일경우는 그순간순간의 i 를 가지고 web apis 로 들어가는거고
+        // var 일경우는 이미 var i = 최종값을 가지고 web api 로들어가는거임
+        // 왜냐면 for문은 callback이 아니니깐 callstack에서 바로 처리됨
+        // 그러므로 var i = 값은 최종값으로 고정됨 (scope 차이에 의함)
+
+        // Callback Queeu 에서는 callStack을 실시간 확인해서 비어있으면 
+        // callback 처리를 실시함 
+
+        for(let i =1 ; i<6; i++){
+            setTimeout(() => {
+                console.log(i)
+                console.log(this) 
+            }, i * 1000);
+            console.log(i)    
+        }
+        // console.log(i)
+    }
+
+
+    document.getElementById('p1').addEventListener('click', function(){
+        p1()
+    })
+
+</script>
+
+

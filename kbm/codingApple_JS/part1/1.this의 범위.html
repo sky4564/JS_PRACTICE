@@ -1,0 +1,41 @@
+<div>scope of this</div>
+
+<script>
+    console.log('1 그냥 일반 함수에서 쓰면 window')
+    console.log('2 오브젝트 내의 함수(메소드)에서 쓰면 함수를 동작시키는 오브젝트')
+    console.log('======================================')
+    // this  == obj(method 의 주인님)
+
+    let obj = {
+        test1 : console.log('obj 안에 들어있는 this'),
+        test2 : console.log(this),
+        test3 : console.log('this 가 변화한다. function안으로 들어가면 범위변경'),
+        func : function met(){
+        // this  == obj 
+        console.log(this)
+        },
+        discription : 'this의 범위 = this가 포함되어있는 object'
+    }
+
+    obj.func()
+
+    console.log('======================================')
+
+    // this == window
+    console.log('script 에 바로 this')
+    console.log(this)
+
+    console.log('======================================')
+
+    // 함수안에 있는 this 는 ? this == window 
+    // = > 여기서 알수 있는게 script 에 작성하기만 하면 window라는 주인님 밑으로 들어가는 것이고 ~ 
+    // window 는 object 이며 보관함이라고 생각하면 된다 ~ 
+    let a = function() {
+        console.log('a method start ')
+        console.log(this)
+    }
+    a()
+    console.log('======================================')
+    
+</script>
+

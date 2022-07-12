@@ -1,0 +1,46 @@
+<div></div>
+
+<script>
+var o1 = {a : 1, b :2};
+// key 값의 중복이 일어날수있음 그렇게 되면 뒤에 오는걸 즉 마지막에 받는걸 기준으로 생성됨 
+console.log`뒤에오는게 a :2`
+var o2 = {...o1, a :2}
+console.log(o2)
+console.log`뒤에오는게 a :1`
+var o2 = {a :2, ...o1}
+console.log(o2)
+
+
+function plus(a,b,c) {
+    console.log(a + b + c)    
+}
+var arr = [10,20,30]
+
+//주먹구구
+plus(arr[0],arr[1],arr[2])
+
+//옛날방식
+plus.apply(undefined, arr)
+
+//요즘방식
+plus(...arr)
+
+//apply
+
+ var person = {
+    인사 : function(...p){
+        console.log(`안녕 ${this.name}`)
+        console.log(p)        
+    }
+ }
+
+  var person2 = {
+    name : `손흥민`
+  }
+
+  person.인사.apply(person2, [1,2])
+  person.인사.call(person2, 1,2)
+
+
+
+</script>

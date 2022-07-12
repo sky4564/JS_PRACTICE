@@ -1,0 +1,38 @@
+<div>변수와 함수의 hoisting, 전역변수 , 참조</div>
+
+<script>
+    
+    // 여기서는  hosting 되면서  a 가 올라옴
+    // 변수의 선언을 변수범위의 최상단 으로 올리는 것.
+    // = > let , const 는 hosting 이 안됩니다.
+    // => 함수도 hosting 일어 납니다 ~ 
+    console.log(a)
+    var a = 123
+    console.log(a)
+
+    // 변수 동시에 여러개 만들기
+    var 나이 = 19 , 이름 = 'kaki' , 성별
+    // 전역변수 ! 위 처럼하거나
+    window.world = 'hahahahaha' 
+
+    //전역변수 => 어느곳에서나 쓸수있는 변수
+    // 바깥에 있는 변수
+    
+    function met(){
+        let area = 'here'
+        //지역변수 ! 
+        console.log(나이)
+        console.log(world)
+    }
+    met()
+    
+
+
+    function miss(){
+        var v = 'value'
+        console.log(v)
+    }
+    // console.log(v)
+    miss()
+
+</script>

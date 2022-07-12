@@ -1,0 +1,56 @@
+<div></div>
+<button id="noArrow">not Arrow</button>
+<button id="arrow">is arrow</button>
+
+<script>
+    
+    let p ={
+        name : '손흥민',
+        sayHi : function() {
+            console.log(`안녕 나는 ${this.name} 이야`)
+        } 
+    }
+    // p.sayHi()
+    // ===================================================//
+
+    let info = {
+        data : [1,2,3,4,5]        
+    }
+    
+    // 이렇게도 object 밖에서 만들어도 결국 안으로 들어가서 작동함 
+    info.전부더하기 = function(){
+        let sum = 0
+        this.data.forEach(function(a){
+            sum += a
+        })
+        console.log(sum)
+    }
+
+    // info.전부더하기()
+    // console.log(info)
+    // ===================================================//
+
+    document.getElementById('noArrow').addEventListener('click',function(){
+        console.log(this)
+        // => 여기서는 버튼이 this
+        setTimeout(function(){
+            console.log(this.innerHTML)
+            // setTimeout 의 콜백으로들어가는 함수  = this 범위가 window됨
+            // 화살표 함수로 this범위를 그대로 가져와줘야 원하는 기능 작동
+            console.log(this)
+            //=> 여기서는 window 가 this
+        }, 1000);
+    })
+
+    // 화살표함수로 변환
+    document.getElementById('arrow').addEventListener('click',function(){
+        console.log(this)
+        // => 여기서는 버튼이 this
+        setTimeout(() => {
+            console.log(this.innerHTML)            
+            console.log(this)            
+        }, 1000);
+    })
+
+
+</script>

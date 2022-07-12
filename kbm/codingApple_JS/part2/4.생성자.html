@@ -1,0 +1,45 @@
+<script>
+    function maker(){
+        //this = 인스턴트
+        this.name = 'kim'
+        this.age = 15
+        this.sayHi = function() {
+            console.log(`안녕 나는 ${this.age}살 ${this.name} 이야`)
+        }
+    }
+
+    let id1 = new maker()
+    
+
+    function maker2(name, age){
+        this.name = name
+        this.age = age
+        this.sayHi = function() {
+            console.log(`안녕 나는 ${this.age}살 ${this.name} 이야`)
+        }
+    }
+
+    let id2 = new maker2('tom', 18)
+
+
+    console.log(id1)
+    console.log(id2)
+
+    // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = //
+    function product(name, price){
+        this.name = name
+        this.price = price
+        this.tax = function() {
+            console.log(`${this.price/10}원 세금내십셩`)
+        }
+    }
+
+    let product1 = new product('gun', 500000)
+    let product2 = new product('knife', 300000)
+    console.log(product1,product1.tax())
+    console.log(product2,product2.tax())
+
+    // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = //
+    
+    
+</script>

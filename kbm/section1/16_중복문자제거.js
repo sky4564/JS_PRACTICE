@@ -14,14 +14,19 @@
                 // }
 
                 // 중복문자 counting 문제풀이
-                answer = 0
-                let pos = s.indexOf('k')
-                console.log(pos)
-                while(pos !== -1){
-                    pos = s.indexOf('k',pos+1)
-                    console.log(pos)
-                    answer++
-                }
+                
+                // answer = 0
+                // let pos = s.indexOf('k')
+                // console.log(pos)
+                // while(pos !== -1){
+                //     pos = s.indexOf('k',pos+1)
+                //     console.log(pos)
+                //     answer++
+                // }
+
+                let j  = [...new Set(s)]
+                let show = j.join('').split('')
+                console.log(show )
 
 
                 return answer;

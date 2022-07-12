@@ -1,0 +1,70 @@
+    <div>
+        1123    
+    </div>
+
+    <script>
+        
+        let c = 'ccccc'
+        let d = 'ddddd'
+        
+        // default parameter 기본값 설정 일반 
+        let test1 = function(a,b = '기본값으로 설정할수있어 함수 가능 연산가능') {
+            console.log`${a} 앞에가 기본 뒤에는 들어갈수도있고 아닐수도있네 ${b}`
+        }
+        test1('a 파라미터')
+
+        // default parameter 연산
+        let test2 = function(a,b = a + 'b더하기 ~ ') {
+            console.log`${a} 앞에가 기본 뒤에는 들어갈수도있고 아닐수도있네 ${b}`
+        }
+        test2('a 파라미터')
+        
+        
+        // 그렇다면 a 조건값에따라서 b 를 넣어줄수 있겠네 
+        function tester(p){
+           if(p === 10) return 8
+           else return 'string'
+        }
+        function test3(a,b = tester(a))
+        {
+         let f = `${a}${b}${a+b}`
+         console.log(f)
+        }
+        test3(10)
+        test3('test')
+
+        //위에서는 함수를 넣는걸 해봄 
+        //=============================================================
+
+        // arugument 에대해서 알아보자
+        let arr = [7,8,9,10,11]
+        function arugumentTest(a,b){
+            //실제로는 1,2 만 참조가 가능하다 a,b 로 되어있으니
+            console.log(a)
+            console.log(b)
+
+            //하지만 argument 써서 a,b 이외의 것들도 참조가 가능해진다.
+            for(let i =0; i < arguments.length; i++){
+                console.log(arguments[i])    
+            }
+            console.log(arguments)
+        }
+        arugumentTest(1,2,3,4,5,6,'ㄴ','ㄱ', ...arr)
+
+        //=============================================================
+
+        //최신에는 rest 쓴다고함
+        // 함수 파라미터 에서 ... 이거 쓰면 rest parameter
+
+        function restTest(...rest){
+            console.log(rest)
+        }
+        restTest(1,2,3,4,5,6,7,8,9, arr)
+
+
+
+
+    </script>
+    
+    
+    
