@@ -9,6 +9,9 @@ function solution(arrays) {
       maxRow += arr[i][j];
       maxCol += arr[j][i];
     }
+    // 이 자리에서 초기화 하는 이유
+    // Math.max에 초기값을 전달하는 이유
+    answer = Math.max(answer, maxRow, maxCol);
   }
 
   const maxLeftDiagonal = arrays
@@ -19,7 +22,7 @@ function solution(arrays) {
     .map((arr, index) => arr[arr.length - index - 1])
     .reduce((pre, cur) => pre + cur, 0);
 
-  answer = Math.max(maxRow, maxCol, maxLeftDiagonal, maxRightDiagonal);
+  answer = Math.max(answer, maxLeftDiagonal, maxRightDiagonal);
 
   return answer;
 }
