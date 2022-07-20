@@ -1,6 +1,5 @@
 // 가장 짧은 문자거리
 
-
 // 강의 풀이
 function solution(s, t) {
   let answer = [];
@@ -27,7 +26,10 @@ function solution(s, t) {
 }
 
 let str = "teachermode";
-console.log(solution(str, 'e')); // 1 0 1 2 1 0 1 2 2 1 0
+console.log(solution(str, 'e')); // 1, 0, 1, 2, 1, 0, 1, 2, 2, 1, 0
+
+str = "teacherrrrrrmode" 
+console.log(solution(str, 'e')); // 1, 0, 1, 2, 1, 0, 1, 2, 3, 4, 5, 4, 3, 2, 1, 0
 
 
 
@@ -52,5 +54,9 @@ function solution(input, target) {
 
 let input = "teachermode";
 let target = "e";
-console.log(solution(input, target)); // 1 0 1 2 1 0 1 2 2 1 0
+console.log(solution(input, target)); // 1, 0, 1, 2, 1, 0, 1, 2, 2, 1, 0
+
+// target 문자에서 거리가 2 이상인 경우 (ex.teacherrrrrrmode) 추가 처리 필요
+input = "teacherrrrrrmode";
+console.log(solution(input, target)); // 1, 0, 1, 2, 1, 0, 1, 2, 2, 2, 2, 2, 2, 2, 1, 0
 */

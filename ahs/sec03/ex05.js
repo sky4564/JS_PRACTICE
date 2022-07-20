@@ -19,7 +19,21 @@ function solution(input){
       
       count = 1;
     }
-    //console.log(result);
+    
+    // console.log(result);
+    /*
+      []
+      [ 'K', '2' ]
+      [ 'K', '2', 'H' ]
+      [ 'K', '2', 'H' ]
+      [ 'K', '2', 'H' ]
+      [ 'K', '2', 'H' ]
+      [ 'K', '2', 'H' ]
+      [ 'K', '2', 'H' ]
+      [ 'K', '2', 'H' ]
+      [ 'K', '2', 'H', 'S', '7' ]
+      [ 'K', '2', 'H', 'S', '7', 'E' ]
+    */
     
     return result;
   });
