@@ -12,6 +12,7 @@ function solution(s, t) {
       answer.push(p);
     }
   }
+
   p = 1000;
   for (let i = s.length - 1; i >= 0; i--) {
     if (s[i] === t) {

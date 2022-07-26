@@ -12,7 +12,7 @@ function solution(arrays) {
       /** 지역의 상하좌우를 구하기 위한 반복문 
        => 변수 k는 directX/Y 배열의 인덱스를 치환하기 위한 변수 */
       for (let k = 0; k < 4; k++) {
-        // 현재 지역 좌, 우측 행의 인덱스
+        // 현재 지역 상, 하측 행의 인덱스
         let nextRow = i + directX[k];
         // 현재 지역 상, 하측 열의 인덱스
         let nextCol = j + directY[k];
