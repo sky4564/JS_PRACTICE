@@ -17,7 +17,7 @@ function solution(input) {
 
   let result = "";
 
-  for (let i = 0; i < filtered.length; i++) {
+  for (let i = 0; i < filtered.length / 2; i++) {
     if (filtered[i] === filtered[filtered.length - i - 1]) {
       result = "YES";
     } else {

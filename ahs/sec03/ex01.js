@@ -16,7 +16,7 @@ function solution(input) {
   let word = input.toLowerCase();
   let result = "";
 
-  for (let i = 0; i < word.length; i++) {
+  for (let i = 0; i < word.length / 2; i++) {
     if (word[i] === word[word.length - i - 1]) {
       result = "YES";
     } else {

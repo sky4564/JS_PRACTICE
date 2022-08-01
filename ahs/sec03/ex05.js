@@ -7,7 +7,8 @@ function solution(input){
   let count = 1;
   
   word.forEach((target, i, arr) => {
-
+    // console.log(target, i, arr);
+    
     if(target === arr[i+1]) {
       count++;
     } else {
