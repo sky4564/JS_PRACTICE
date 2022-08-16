@@ -1,23 +1,15 @@
-from collections import deque
+function compareMaps(map1, map2){
+    if(map1.size!==map2.size) return false;
+    for(let [key, val] of map1){
+        if(!map2.has(key) || map2.get(key)!==val) return false;
+    }
+    return true;
+}
+            
+function solution(s, t){
 
-N, M = map(int, input().split())
-maze = []
-for _ in range(N):
-    maze.append(list(map(int, input())))
-visited = [[False for a in range(M)] for b in range(N)]
-dx = [0, 0, -1, 1]
-dy = [1, -1, 0, 0]
-def bfs(graph, n, m, visited, distance):
-    if -1 < n < N and -1 < m < M:
-        if visited[n][m] == False and graph[n][m] != 0:
-            visited[n][m] = True
-            graph[n][m] = distance + 1
-            for i in range(4):
-                bfs(graph, n + dx[i], m + dy[i], visited, graph[n][m])
-                
-    else:
-        return
-bfs(maze, 0, 0, visited, 0)
-print(1)
-print(maze)
-print(maze[-1][-1])
+} 
+let a="bacaAacba";
+let b="abc";
+console.log(solution(a, b));
+        
