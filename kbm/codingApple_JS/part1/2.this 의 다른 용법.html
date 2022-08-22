@@ -45,13 +45,15 @@
         name : ['jj', 'aa', 'bb'],
         func : function() {
             
+
+            console.log(this)  // 여기가 쫌 헷갈리겠네 여기서 this는 obj 가르킴
             // 반복문에 들어가 있는 this 는 window를 가르킴
             // foreach 의 콜백으로 들어가니깐 결국 상위요소는 foreach이고 
             //foreach 는 window에 붙어있는거라서 ㅇㅇㅇ 
             obj2.name.forEach(function(){ 
                 console.log(this)
             })
-            console.log(this)  // 여기가 쫌 헷갈리겠네 여기서 this는 obj 가르킴
+            
 
         }
     }
