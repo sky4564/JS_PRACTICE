@@ -2,11 +2,11 @@ function solution(k, arr) {
   let pre = 0;
   let post = pre + k;
   let max = 0;
-  while (post <= arr.length) {
-    const sum = arr.slice(pre, post).reduce((acc, cur) => acc + cur, 0);
+  let sum = arr.slice(pre, post).reduce((acc, cur) => acc + cur, 0);
+  max = sum;
+  for (let i = k; i < arr.length; i++) {
+    sum += arr[i] - arr[i - k];
     sum > max ? (max = sum) : null;
-    pre++;
-    post++;
   }
   return max;
 }
