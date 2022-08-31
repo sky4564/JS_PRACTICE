@@ -38,7 +38,6 @@ function solution(source, target) {
     if (compareMaps(sH, tH)) answer++; 
 
     // lt가 가리키는 값 빼고, 만약 값이 0이면 해당 값 삭제(없는 문자), 그리고 lt++
-    console.log(sH.get(source[lt]) - 1);
     sH.set(source[lt], sH.get(source[lt]) - 1);
     if (sH.get(source[lt]) === 0) sH.delete(source[lt]);
     lt++;
