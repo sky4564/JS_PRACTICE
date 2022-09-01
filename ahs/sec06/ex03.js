@@ -1,20 +1,21 @@
 // 크레인 인형뽑기(카카오 기출)
-// fruits.push(...)는 fruits[fruits.length] = ... 와 같다. (https://ko.javascript.info/array#ref-80) 
-// fruits.pop()은 fruits[fruits.length-1]을 제거하는 것이다.
+// array.push(...)는 array[array.length] = ... 와 같다. (https://ko.javascript.info/array#ref-80) 
+// array.pop()은 array[array.length-1]을 제거하는 것이다.
 
 function solution(board, moves) {
-    let answer = [];
+    let answer = 0;
+    let basket = [];
+
     for (m of moves) {
-        let targetArray = board[m-1];
-        let target = targetArray[targetArray.length-1];
+        let target = board[m-1].pop();
 
         if (target !== 0) {
-            answer.push(targetArray.pop());
+            if (target === basket[basket.length-1]) {
+                answer += 2;
+            }
+
+            basket.push(target);
         }
-
-        console.log(target, answer[answer.length-1]);
-
-        //if (target !== 0 && target === answer[answer.length])
     }
 
     return answer;
