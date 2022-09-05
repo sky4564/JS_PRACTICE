@@ -1,4 +1,51 @@
-function solution(board, moves){
+function solution(a, b){
+    let stack = []
+    for(let x = 0; x < b.length; x++) {
+        let num = b[x]
+            for (let i = 0 ; i <a.length ; i++){
+                if(a[i][num-1] !== 0){
+                    stack.push(a[i][num-1])
+                    a[i][num-1] = 0
+                    break
+                }
+            }
+    }       
+    console.log(stack)
+    let ans = 0    
+    for(let x = 0; x< stack.length; x++){
+        if(stack[x] == stack[x+1]){
+            stack.splice(x, 2)
+            ans +=2
+            x = 0
+        }
+    }
+    
+    return ans
+}
+
+function solution2(a, b){
+    let stack = []
+    for(let x = 0; x < b.length; x++) {
+        let num = b[x]
+            for (let i = 0 ; i <a.length ; i++){
+                if(a[i][num-1] !== 0){
+                    stack.push(a[i][num-1])
+                    a[i][num-1] = 0
+                    break
+                }
+            }
+    }       
+    console.log(stack)
+    let ans = 0    
+    for(let x = 0; x< stack.length; x++){
+        if(stack[x] == stack[x+1]){
+            stack.splice(x, 2)
+            ans +=2
+            x = 0
+        }
+    }
+    
+    return ans
 }
             
 let a=[[0,0,0,0,0],
