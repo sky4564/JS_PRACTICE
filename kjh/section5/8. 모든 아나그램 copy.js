@@ -48,6 +48,7 @@ function solution(s, t) {
   for (let i = 0; i < len - 1; i++) {
     m1.has(i) ? m1.set(i, m1.get(i) + 1) : m1.set(i, 1);
   }
+  console.log(m1, m2);
   let lf = 0;
   for (let rt = len; rt < s.length; rt++) {
     if (m1.has(s[rt])) m1.set(s[rt], m1.get(s[rt]) + 1);

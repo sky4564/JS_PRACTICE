@@ -5,7 +5,7 @@ function solution(s) {
   }
   let max = 0;
   let candidate = "";
-
+  console.log(dic);
   for (let i in dic) {
     if (dic[i] > max) {
       max = dic[i];
