@@ -1,7 +1,7 @@
 function solution2(s) {
-  let i = 0;
   const answer = [];
   let flag = 0;
+
   for (let i of s) {
     if (i === "(") {
       flag++;
