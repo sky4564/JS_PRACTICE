@@ -2,7 +2,7 @@
 
 function solution(c, arr) {
     let answer = Number.MIN_SAFE_INTEGER;
-    let n = arr.length;
+    let n = arr.length; 
     function DFS(L, sum) {
         if (sum > c) return;
         if (L === n) {
