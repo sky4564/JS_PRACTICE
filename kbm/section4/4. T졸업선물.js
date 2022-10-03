@@ -8,7 +8,7 @@ console.log(product)
 for(let i = 0 ; i < n ; i ++) {
   cnt = 0
   let money = m
-  money -=(product[i][0] + product[i][1])
+  money -=(product[i][0]/2 + product[i][1])
   for(let j = 0 ; j < n ; j ++){
     if(j !== i && money < (product[j][0] + product[j][1])) break
     if(j !== i && money > 0){
@@ -23,5 +23,5 @@ return ans
 
 }
 
-let arr=[[6, 6], [2, 2], [4, 3], [4, 5], [10, 3]];
+let arr=[[6, 6], [2, 100], [4, 3], [4, 5], [10, 100]];
 console.log(solution(28, arr));

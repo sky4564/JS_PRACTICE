@@ -6,7 +6,7 @@ function solution(m, product){
   let money = 0
   let ans = 0
   
-  // 최대값 선정 및 할인 진행
+  //최대값 선정 및 할인 진행 
   for(let i =0; i < product.length; i++){
     for(let j =0; j <product[i].length; j++){
       if(j === 0){

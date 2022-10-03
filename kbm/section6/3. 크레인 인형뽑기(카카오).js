@@ -55,4 +55,4 @@ let a=[[0,0,0,0,0],
        [3,5,1,3,1]];
 
        let b=[1, 5, 3, 5, 1, 2, 1, 4];
-       console.log(solution(a, b));
+       console.log(solution2(a, b));

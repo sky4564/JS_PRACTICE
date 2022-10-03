@@ -1,30 +1,22 @@
 function solution(s){
 let pot = []
 let ans = 0;
-let flag = ''
-    for (let i = 0; i < a.length; i++ ){
+    for (let i = 0; i < s.length; i++ ){
         if(s[i]=== '(') {
-            pot.push(s[i])
-            flag ='israz'    
+            pot.push(s[i])            
         }
-        else if (s[i]=== ')'){
-            if(s[i-1] ==='('){
-                if(flag === 'isbar'){
-                    pot.pop()
-                    ans += 1    
-                    break;
-                }
-                pot.pop(s[i])
-                ans += pot.length
-                flag = 'isbar'
-            }
+        else {
+            pot.pop()
+            if(s[i-1] ==='('){                
+                    ans += pot.length            
+            } else ans++
         }
     }
     return ans
 }
             
 
-let a="()( ( ( ()() )(())()))(())";
+let a="()(((()())(())()))(())";
 
 
 
