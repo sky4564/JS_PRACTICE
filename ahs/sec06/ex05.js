@@ -15,6 +15,19 @@ function solution(s) {
     return answer;
 }
 
+/*
+// 정호님 풀이
+function solution(input){
+  let stick = input;
+  let stack = 0;
+  let result = 0;
+  for(let i in stick){
+      stick[i] === '(' ? stack++ : stick[i-1] === '(' ?  (result += --stack) : (--stack)+1 && result++;
+  }
+  return result;
+}
+*/
+
 let input1 = "()(((()())(())()))(())";
 console.log(solution(input1)); // 17
 

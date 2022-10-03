@@ -1,17 +1,18 @@
 function solution(m, arr){
-let ri = li = 0
+let li = 0
 let tmp = 0
 let cnt = 0
+
 for(let ri = 0; ri < arr.length; ri++){
   tmp += arr[ri]
-  if(tmp === 6) {
-    cnt++
-
-  }
-  while(tmp > 6){
-    tmp -= arr[ri]
+  if(tmp === m) cnt++  
+  while(tmp >= m){
+    tmp -= arr[li++]    
+    if(tmp === m ) cnt++
   }
 }
+
+return cnt
 
 }
 

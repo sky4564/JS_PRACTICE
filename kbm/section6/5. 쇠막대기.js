@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 function solution(s){
 let pot = []
 let ans = 0;
@@ -21,3 +22,5 @@ let a="()(((()())(())()))(())";
 
 
 console.log(solution(a));
+=======
+>>>>>>> 8695e00af1c00a155eca5c4fe4d97987f2d89ee8

@@ -1,13 +1,13 @@
 function solution(need, plan) {
   let idx = 0;
-  let stack = [];
+  let stack = ["C", "B", "A"];
   for (let i of plan) {
     if (i === need[idx]) {
       stack.push(i);
       idx++;
     }
   }
-  return a === stack.join("") ? "YES" : "NO";
+  return need === stack.join("") ? "YES" : "NO";
 }
 
 let a = "CBA";
