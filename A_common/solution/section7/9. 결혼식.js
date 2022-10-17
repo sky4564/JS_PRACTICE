@@ -1,10 +1,3 @@
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>출력결과</title>
-    </head>
-    <body>
-        <script>
             function solution(times){
                 let answer=Number.MIN_SAFE_INTEGER;
                 let T_line=[];
@@ -27,6 +20,3 @@
 
             let arr=[[14, 18], [12, 15], [15, 20], [20, 30], [5, 14]];
             console.log(solution(arr));
-        </script>
-    </body>
-</html>
