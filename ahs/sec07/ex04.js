@@ -28,11 +28,11 @@ function solution(arr) {
   let answer = arr;
   for (let i = 0; i < arr.length; i++) {
     let tmp = arr[i], j;
-    for (j = i - 1; j >= 0; j--) {
-      if (arr[j] > tmp) arr[j + 1] = arr[j];
+    for (j = i - 1; j >= 0; j--) { // 미리 정렬된 앞부분 탐색
+      if (arr[j] > tmp) arr[j + 1] = arr[j]; // 뒷부분에 복사해두고
       else break;
     }
-    arr[j + 1] = tmp;
+    arr[j + 1] = tmp; // j가 끝난 지점 바로 뒤쪽이 들어가야 될 위치
   }
   return answer;
 }
