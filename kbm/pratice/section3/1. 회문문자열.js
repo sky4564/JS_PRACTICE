@@ -1,6 +1,7 @@
 function solution(s){
-
+    console.log(s)
 }
 
 
-console.log(solution(str));
+let str = 'gooG'
+console.log(solution(str)); 
