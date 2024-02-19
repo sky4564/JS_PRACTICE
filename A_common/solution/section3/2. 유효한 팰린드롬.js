@@ -1,6 +1,7 @@
             function solution(s){
                 let answer="YES";
-                s=s.toLowerCase().replace(/[^a-z]/g, '');
+                s=s.toLowerCase().replace(/[^a-z]/g, '&');
+                console.log(s)
                 if(s.split('').reverse().join('')!==s) return "NO";
                 return answer;
             }
