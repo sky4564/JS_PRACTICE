@@ -2,19 +2,19 @@
 import java.util.HashSet;
 import java.util.Set;
 
-class MyData {
-    int v;
+// class MyData {
+//     int v;
 
-    public MyData(int v) {
-        this.v = v;
-    }
+//     public MyData(int v) {
+//         this.v = v;
+//     }
 
-    @Override
-    public String toString() {
-        return ""+v;
-    }
+//     @Override
+//     public String toString() {
+//         return ""+v;
+//     }
     
-}
+// }
 
 public class set {
     // 중복되는 값이 필요 없는 경우
